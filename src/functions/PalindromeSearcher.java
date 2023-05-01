@@ -16,13 +16,41 @@ package functions;
 //        "racecar"	                                ["racecar", "aceca", "cec"]
 //        ""	                                    []
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class PalindromeSearcher {
     public static void main(String[] args) {
-        System.out.println(search("apple"));
+        String input = "dog goat dad duck doodle never";
+        String[] output = search(input);
+        System.out.println(Arrays.toString(output));
     }
 
-    private static char[] search(String apple) {
+    private static String[] search(String string) {
+        List<String> palindromes = new ArrayList<>();
+        for (int i = 0; i < string.length() - 2; i++) {
+            for (int j = i + 2; j < string.length(); j++) {
+                String sub = string.substring(i, j + 1);
+                if (isPalindrome(sub)) {
+                    palindromes.add(sub);
+                }
+            }
+        }
+        return palindromes.toArray(new String[0]);
+    }
 
-        return null;
+    private static boolean isPalindrome(String string) {
+        string = string.trim().toLowerCase();
+        int left = 0;
+        int right = string.length() - 1;
+        while (left < right) {
+            if (string.charAt(left) != string.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 }
