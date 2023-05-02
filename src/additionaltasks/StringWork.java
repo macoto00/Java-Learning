@@ -44,8 +44,10 @@ public class StringWork {
 
     private static String functionD(String[] strings) {
         StringBuilder stringBuilder = new StringBuilder("GFA:" + "\n");
+        String dash = "-";
         for (int i = 0; i < strings.length; i++) {
-            stringBuilder.append(i + 1).append(".").append("-").append(strings[i]).append("\n");
+            stringBuilder.append(i + 1).append(".").append(dash).append(strings[i]).append("\n");
+            dash += "-";
         }
         return stringBuilder.toString();
     }
