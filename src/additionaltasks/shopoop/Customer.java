@@ -21,16 +21,16 @@ public class Customer {
         invoices.add(invoice);
     }
 
-    public int totalSpend() {
-        int totalSpend = 0;
+    public int totalSpent() {
+        int totalSpent = 0;
         for (Invoice invoice : invoices) {
-            totalSpend += invoice.totalPrice();
+            totalSpent += invoice.totalPrice();
         }
-        return totalSpend;
+        return totalSpent;
     }
 
-    public static List<Customer> topCustomers(List<Customer> customers, int numCustomers) {
-        customers.sort(Comparator.comparingInt(Customer::totalSpend).reversed());
-        return customers.subList(0, Math.min(numCustomers, customers.size()));
+    public static List<Customer> topCustomers (List<Customer> customers, int numberOfTopCustomer) {
+        customers.sort(Comparator.comparingInt(Customer::totalSpent).reversed());
+        return customers.subList(0, Math.min(numberOfTopCustomer, customers.size()));
     }
 }
