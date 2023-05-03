@@ -1,4 +1,4 @@
-package additionaltasks.twodarrays;
+package additionaltasks.twodarrayssum;
 public class MatrixAddition {
 
     public static int[][] matrixAddition (int[][] matrix1, int[][] matrix2) throws Exception {
