@@ -9,9 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 public class MostCommonCharacters {
-    public static void main(String[] args) throws IOException {
-        getTwoMostCommonCharacters("src/com/gfa/exam/ExampleFile.txt");
-    }
 
     public static Map<Character, Integer> getTwoMostCommonCharacters(String filename) throws IOException {
         // Create a map to store character frequencies
