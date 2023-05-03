@@ -1,6 +1,5 @@
 package additionaltasks.filemanipulation;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,6 +35,7 @@ public class LicencePlate {
             }
 
             for (String word : words) {
+                String regex = "[aeiouAEIOU]";
                 if (word.charAt(0) == input.charAt(0)) {
                     System.out.print(word + " ");
                 }
