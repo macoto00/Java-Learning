@@ -22,6 +22,7 @@ public class Main {
 
         Customer tomas = new Customer("Tomáš");
         Invoice tomasInvoice = new Invoice(tomas);
+        tomas.addInvoice(tomasInvoice);
         tomasInvoice.addInvoiceItem(first);
         tomasInvoice.addInvoiceItem(second);
         tomasInvoice.addInvoiceItem(third);
@@ -30,9 +31,14 @@ public class Main {
         System.out.println(tomasInvoice);
         System.out.println();
 
+        bread.setPrice(600);
+
+        InvoiceItem seventh = new InvoiceItem(bread, 1);
+
         Customer eva = new Customer("Eva");
         Invoice evaInvoice = new Invoice(eva);
-        evaInvoice.addInvoiceItem(third);
+        eva.addInvoice(evaInvoice);
+        evaInvoice.addInvoiceItem(seventh);
         evaInvoice.addInvoiceItem(fifth);
         evaInvoice.addInvoiceItem(sixth);
 
@@ -48,7 +54,5 @@ public class Main {
         for (Customer customer : topCustomers) {
             System.out.println(customer.getName() + " spent " + customer.totalSpent() + " in total.");
         }
-
-        System.out.println(tomasInvoice.totalPrice());
     }
 }
