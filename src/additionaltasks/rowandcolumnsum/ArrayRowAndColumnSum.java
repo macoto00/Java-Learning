@@ -6,6 +6,10 @@ public class ArrayRowAndColumnSum {
         int column = matrix[0].length;
         int[][] result = new int[2][column];
 
+        if (column == 0) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+
         // Calculate row sums
         for (int i = 0; i < row; i++) {
             int rowSum = 0;
