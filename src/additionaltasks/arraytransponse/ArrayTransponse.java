@@ -38,12 +38,27 @@ public class ArrayTransponse {
 
             System.out.println();
         }
+
+        System.out.println(Arrays.deepToString(matrix2));
     }
     public static int[][] transpose(int[][] matrix) {
         int rows = matrix.length;
         int columns = matrix[0].length;
+
+        // handle irregular matrices, i.e. matrices where the length of
+        // each row is not the same, by throwing an exception
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (matrix[i][j] != matrix[j][i]) {
+                    throw new IllegalArgumentException("Invalid input");
+                }
+            }
+        }
+
+        // new matrix where the result is stored
         int[][] result = new int[rows][columns];
 
+        // loop to fill the result with transposed matrix
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 result[i][j] = matrix[j][i];
