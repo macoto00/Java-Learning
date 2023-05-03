@@ -1,8 +1,5 @@
 package additionaltasks;
 
-import javax.lang.model.element.VariableElement;
-import java.util.Arrays;
-
 public class StringWork {
     public static void main(String[] args) {
         String string = "Lukáš";
@@ -28,10 +25,10 @@ public class StringWork {
     }
 
     public void functionB(String string) {
-        String gfa = "GFA:";
         String ales = "Ales";
         String lukasK = "Lukas K.";
-        System.out.println(gfa + "\n" + string + "\n" + ales + "\n" + lukasK);
+        string = "GFA" + "\n" + string + "\n" + ales + "\n" + lukasK;
+        System.out.println(string);
     }
 
     public static String functionC(String string) {
