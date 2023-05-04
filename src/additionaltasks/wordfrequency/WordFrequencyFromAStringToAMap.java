@@ -19,7 +19,7 @@ public class WordFrequencyFromAStringToAMap {
 
     public static HashMap<String, Integer> wordToAMap(String string) {
         HashMap freqMap = new HashMap<>();
-        String[] words = string.split(" ");
+        String[] words = string.split("\\W+");
 
         for (String word : words) {
             int counter = 0;
