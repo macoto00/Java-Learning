@@ -30,17 +30,17 @@ public class Race {
             System.out.println(contestant.toString());
         }
 
-        // --- Unfinished code ---
-//        for (Player player : players) {
-//            player.getBets();
-//            Contestant contestant = bet.getContestant();
-//            if (contestant.getPlacement() == 1) {
-//                int winnings = bet.getAmount() * 2;
-//                player.addMoney(winnings);
-//                System.out.println(player.getName() + " has won " + winnings + "$ with the bet: " + bet.getBetId());
-//            }
-//        }
-
+        for (Player player : players) {
+            Bet bet = (Bet) player.getBets();
+            if (bet != null) {
+                Contestant contestant = bet.getContestant();
+                if (contestant.getPlacement() == 1) {
+                    int winnings = bet.getAmount() * 2;
+                    player.addMoney(winnings);
+                    System.out.println(player.getName() + " has won " + winnings + "$ with the bet: " + bet.getBetId());
+                }
+            }
+        }
     }
 
     private boolean contains(int[] array, int value) {
