@@ -1,4 +1,4 @@
-package com.gfa.exam;
+package foundationexam;
 
 public class GreatestValuesInMatrices {
     public static int[][] mergeMatrix(int[][] matrix1, int[][] matrix2) {

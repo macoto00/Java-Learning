@@ -1,4 +1,4 @@
-package com.gfa.exam;
+package foundationexam;
 
 import java.util.ArrayList;
 import java.util.List;

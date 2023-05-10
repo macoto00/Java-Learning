@@ -1,4 +1,4 @@
-package com.gfa.exam;
+package foundationexam;
 
 public class Contestant {
     private String name;

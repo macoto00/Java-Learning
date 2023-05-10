@@ -1,4 +1,4 @@
-package com.gfa.exam;
+package foundationexam;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
